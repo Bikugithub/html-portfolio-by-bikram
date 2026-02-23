@@ -1,0 +1,15 @@
+*{
+    text-align: center;
+}
+h2 {background-color: darkkhaki;}
+
+h3{background-color: rgb(255, 238, 141); font-family: monospace; }
+
+h3 {text-align: left;}
+
+.note {color: indigo; font: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+.note5 {color: rgb(54, 3, 3); font: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+
+*{ background-color: darksalmon;}
+
+li {text-align: left;   font-family: Verdana, Geneva, Tahoma, sans-serif;}

@@ -103,14 +103,15 @@ nav .logo {
 .btn {
     display: inline-block;
     padding: 10px 25px;
-    background-color: var(--accent);
-    color: #fff !important;
+    background-color: #0284c7 !important; /* Forces the solid blue background */
+    color: #ffffff !important;            /* Forces the white text */
     text-decoration: none;
     border-radius: 5px;
     font-weight: 600;
     box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
     transition: transform 0.2s;
 }
+
 
 .btn:hover {
     transform: translateY(-3px);

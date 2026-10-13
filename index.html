@@ -3,60 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY PERSONAL PORTFOLIO</title>
+    <title>Bikram Parui | Personal Portfolio</title>
     <link rel="stylesheet" href="./style.css">
-
+    <!-- Imports a modern, clean font from Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <H2>NAME :Bikram Parui</H2>
-    
+    <nav>
+        <div class="logo">Bikram Parui</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-btn">☀️</button>
+    </nav>
 
+    <header id="hero" class="hidden">
+        <div class="hero-content">
+            <h1>Hi, I'm Bikram Parui</h1>
+            <p class="tagline"><b>I 💖 CODING :]</b> | Aspiring Full Stack Developer</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+        <div class="hero-image">
+            <img src="myphoto.jpg" alt="BIKRAM PARUI'S PHOTO">
+        </div>
+    </header>
 
-    <p class="note"><b>I &#x1F496; CODING :] </b></p>
-
-    <ol type="1">
-        <img src="myphoto.jpg" alt="BIKRAM PARUI'S PHOTO" height="220px" width="200px"> <br>
-        
-        <li> <H3>EDUCATION :</H3>
+    <section id="about" class="hidden">
+        <h2 class="section-title">Education & Hobbies</h2>
+        <div class="about-grid">
+            <div class="card">
+                <h3>🎓 Education</h3>
                 <ul>
-                    <li>PRIMARY SCHOOL - KOCHIMON SISHU ANGAN </li>
-                    <li>H.S - <a href="https://school.banglarshiksha.gov.in/ws/website/index/19121415405">KAMALPORE HIGH SCHOOL (H.S)</a></li>
-                <li>COLLEGE - <a href="https://en.wikipedia.org/wiki/Sreegopal_Banerjee_College">BAGHATI COLLEGE</a></li>
-            
-          
-                </li> </ul> 
-                 
+                    <li><b>College:</b> <a href="https://en.wikipedia.org/wiki/Sreegopal_Banerjee_College" target="_blank">Baghati College</a></li>
+                    <li><b>H.S:</b> <a href="https://school.banglarshiksha.gov.in/ws/website/index/19121415405" target="_blank">Kamalpore High School</a></li>
+                    <li><b>Primary:</b> Kochimon Sishu Angan</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>🏕️ Hobbies</h3>
+                <ul>
+                    <li>Reading books</li>
+                    <li>Listening to songs</li>
+                    <li>Exploring new places</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
+    <section id="skills" class="hidden">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+            <span class="skill-pill">HTML5</span>
+            <span class="skill-pill">CSS3</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">React</span>
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">MongoDB</span>
+        </div>
+    </section>
 
-                
-       <li><H3>SKILLS :</H3></li>  
-        
-        <ul><li>html,css,JAVAscript</li>
-        <li>node js,react</li>
-        <li>mongo DB</li>
-        
-        
-        </ul></li>
-       
-        <li><H3>HOBBIES :</H3> 
-            <ul><li> reading books</li>
-            <li>listening songs</li>
-            <li>exploring new places</li>
-        
-        
-        </ul></li>
-        
-        <li><H3>CONTACT NO. :</H3> 9641417625</li>
-        
-        <li><H3>EMAIL :</H3> bikramparui44@gmail.com</li>
+    <section id="projects" class="hidden">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <a href="https://bikugithub.github.io/html-portfolio-by-bikram/" target="_blank" class="project-card">
+                <h3>Basic Portfolio</h3>
+                <p>My very first portfolio built purely with HTML & CSS.</p>
+            </a>
+            <a href="https://bikugithub.github.io/analog-clock-by-bikram-using-HTML-CSS-JS/Clock%20Using%20HTML,%20CSS%20&%20JS/" target="_blank" class="project-card">
+                <h3>Analog Clock</h3>
+                <p>An interactive clock built using HTML, CSS, and Vanilla JavaScript.</p>
+            </a>
+            <a href="https://bikugithub.github.io/MEME-PAGE-FOR-FUN/" target="_blank" class="project-card">
+                <h3>Fun Meme Page</h3>
+                <p>A multi-page fun interactive meme site using CSS positioning and Flexbox.</p>
+            </a>
+        </div>
+    </section>
 
-        <li><h3>PROJECTS :</h3> <p> <a href="https://bikugithub.github.io/html-portfolio-by-bikram/">portfolio using html & css</a>, <a href="https://bikugithub.github.io/analog-clock-by-bikram-using-HTML-CSS-JS/Clock%20Using%20HTML,%20CSS%20&%20JS/">analog-clock-by-bikram-using-HTML-CSS-JS</a>
-        , <a href="https://bikugithub.github.io/MEME-PAGE-FOR-FUN/"> fun page </a> </p>
-        </li>
-    </ol>
+    <section id="contact" class="hidden">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-info">
+            <!-- These buttons trigger JavaScript functions to copy text! -->
+            <button class="copy-btn" onclick="copyText('9641417625')">📞 +91 9641417625</button>
+            <button class="copy-btn" onclick="copyText('bikramparui44@gmail.com')">✉️ bikramparui44@gmail.com</button>
+        </div>
+    </section>
+
+    <footer>
+        <p class="note5">MADE BY BIKRAM WITH ❣</p>
+    </footer>
+
     
-
-    <P class="note5">MADE BY BIKRAM WITH &#x2763; </P>
+    <script src="./script.js"></script>
 </body>
-
 </html>

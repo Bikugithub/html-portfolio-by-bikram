@@ -1,15 +1,264 @@
-*{
+/* Custom CSS Variables for easy theme switching */
+:root {
+    bg-color: #0f172a; 
+    text-color: #f8fafc;
+    accent: #38bdf8;
+    card-bg: #1e293b;
+}
+
+/* The light theme that triggers via JavaScript */
+body.light-mode {
+    bg-color: #f8fafc;
+    text-color: #0f172a;
+    accent: #0284c7;
+    card-bg: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.4s, color 0.4s;
+    scroll-behavior: smooth; /* Makes clicking nav links scroll beautifully */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Sticky Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: sticky;
+    top: 0;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+body.light-mode nav {
+    background: rgba(248, 250, 252, 0.9);
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+#theme-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 5%;
+    gap: 50px;
+    min-height: 80vh;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--accent);
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* The cool floating image animation */
+.hero-image img {
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* General Layout Sections */
+section {
+    padding: 80px 5%;
     text-align: center;
 }
-h2 {background-color: darkkhaki;}
 
-h3{background-color: rgb(255, 238, 141); font-family: monospace; }
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--accent);
+}
 
-h3 {text-align: left;}
+/* CSS Grid layout for Cards */
+.about-grid, .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-.note {color: indigo; font: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
-.note5 {color: rgb(54, 3, 3); font: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+.card, .project-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    text-decoration: none;
+    color: var(--text-color);
+    border: 2px solid transparent;
+    transition: transform 0.3s, border-color 0.3s;
+}
 
-*{ background-color: darksalmon;}
+/* Interactivity on hover */
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+}
 
-li {text-align: left;   font-family: Verdana, Geneva, Tahoma, sans-serif;}
+.card h3, .project-card h3 {
+    margin-bottom: 15px;
+    color: var(--accent);
+}
+
+.card ul {
+    list-style-position: inside;
+    line-height: 1.8;
+}
+
+.card a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* Skill Pills Container */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.skill-pill {
+    background-color: var(--card-bg);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 1px solid var(--accent);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.skill-pill:hover {
+    background-color: var(--accent);
+    color: #fff;
+    cursor: crosshair;
+}
+
+/* Contact Buttons */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.copy-btn {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 2px solid var(--accent);
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.copy-btn:hover {
+    background-color: var(--accent);
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--card-bg);
+    margin-top: 50px;
+}
+.note5 {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Scroll Fade Animation Classes managed by JavaScript */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Simple Mobile Adjustments */
+@media(max-width: 768px) {
+    .nav-links {
+        display: none; 
+    }
+}
